@@ -1,0 +1,38 @@
+# Binarios
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+performance-api
+test-app/test-app
+
+# Archivos de prueba
+*.test
+*.out
+
+# Archivos de perfil
+*.prof
+*.pprof
+
+# Dependencias
+vendor/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Archivos temporales
+tmp/
+temp/
+

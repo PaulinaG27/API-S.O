@@ -1,0 +1,42 @@
+====================================================================================================
+LABORATORIO 3 - MULTIPLICACIÓN DE MATRICES CON PROCESOS
+====================================================================================================
+====================================================================================================
+BENCHMARK DE RENDIMIENTO - VERSIÓN C
+====================================================================================================
+Integrantes:
+  • Daniel Agudelo - 1001015358
+  • Paulina Garcia - 1000414258
+Universidad de Antioquia
+Curso: Sistemas Operativos
+Fecha: 05/11/2025 22:33:07
+====================================================================================================
+INFORMACIÓN DEL SISTEMA
+====================================================================================================
+Sistema operativo: Linux
+Kernel: 6.6.87.2-microsoft-standard-WSL2
+Arquitectura: x86_64
+Procesador: AMD Ryzen 5 7535HS with Radeon Graphics
+Núcleos lógicos: 12
+Memoria RAM: 7.4Gi
+Compilando matrix_mul.c...
+✔ Compilación exitosa
+A(450x500) × B(500x600) = C(450x600)
+Método utilizado: Memoria Compartida (Shared Memory)
+Funciones: shmget(), shmat(), shmdt()
+Ventajas:
+  • Alta velocidad de comunicación
+  • Acceso directo a memoria sin copias
+  • Ideal para datos grandes (matrices)
+Tiempo secuencial: 0.449 segundos
+Procesos | Seq (s)        | Par (s)        | Speedup  | Eficiencia
+---------|----------------|----------------|----------|-----------
+1        | 0.449          | 0.000          | x        | %
+2        | 0.449          | 0.000          | x        | %
+4        | 0.449          | 0.001          | 449.00x  | 11225%
+8        | 0.449          | 0.002          | 224.50x  | 2806%
+16       | 0.449          | 0.004          | 112.25x  | 702%
+• Speedup máximo: observado en la tabla.
+• La eficiencia disminuye con más procesos debido al overhead de fork() y wait().
+• La memoria compartida permite comunicación eficiente sin copias.
+• Los resultados fueron verificados: secuencial = paralelo.

@@ -1,0 +1,7 @@
+*.md
+*.txt
+test-app/
+.git/
+.gitignore
+*.log
+
